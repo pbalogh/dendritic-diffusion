@@ -88,6 +88,54 @@ def internal_repetition(text, n=3):
     return repeated / max(1, len(grams))
 
 
+def has_non_latin_script(text):
+    """
+    Return True if text contains any non-Latin script characters (CJK,
+    Cyrillic, Arabic, etc.). Base models trained on multilingual data
+    sometimes switch languages mid-generation — this catches that.
+    """
+    import unicodedata
+    for c in text:
+        if ord(c) > 0x024F:  # Beyond Latin Extended-B
+            cat = unicodedata.category(c)
+            if cat.startswith('L'):  # It's a letter, but non-Latin
+                return True
+    return False
+
+
+def cross_branch_repetition(new_text, previous_texts, threshold=0.6):
+    """
+    Check if a new branch is too similar to any previous branch.
+    Uses trigram overlap (Jaccard similarity). Returns True if repetitive.
+    
+    This catches the degenerate mode where the model generates the same
+    sentence over and over across branches — each branch passes the
+    internal_repetition check (it's internally coherent) but the branches
+    are all clones of each other.
+    """
+    if not previous_texts:
+        return False
+    
+    new_words = new_text.lower().split()
+    if len(new_words) < 4:
+        return False
+    new_grams = set(tuple(new_words[i:i+3]) for i in range(len(new_words) - 2))
+    
+    for prev in previous_texts:
+        prev_words = prev.lower().split()
+        if len(prev_words) < 4:
+            continue
+        prev_grams = set(tuple(prev_words[i:i+3]) for i in range(len(prev_words) - 2))
+        
+        # Jaccard similarity
+        intersection = len(new_grams & prev_grams)
+        union = len(new_grams | prev_grams)
+        if union > 0 and intersection / union > threshold:
+            return True
+    
+    return False
+
+
 def denoise_branch(input_ids, start, end, steps=28, temperature=1.15):
     """Denoise masked positions iteratively."""
     for step in range(steps):
@@ -191,6 +239,7 @@ def grow_with_trace(seed_text):
     text_ids = list(prompt_ids)
     plen = len(prompt_ids)
     trace = []
+    branch_texts = []  # Track text of all previous branches for cross-branch repetition check
     
     # Measure INITIAL supersaturation before generating anything
     init_sat = measure_supersaturation_entropy(text_ids, len(text_ids), 24, N_PROBES)
@@ -230,11 +279,43 @@ def grow_with_trace(seed_text):
                 'sat': sat['sat_entropy'] if sat else 0.0,
                 'sat_top1': sat['sat_top1'] if sat else 0.0,
                 'tokens_added': len(clean_tokens),
-                'text': clean_text[:100],
+                'text': clean_text,
                 'status': 'repetitive',
             })
             break
         
+        # Cross-branch repetition: stop if this branch is too similar to any
+        # previous branch. This catches the degenerate mode where the model
+        # generates the same sentence across branches while supersaturation
+        # stays high (confident repetition masquerading as growth).
+        if cross_branch_repetition(clean_text, branch_texts):
+            sat = measure_supersaturation_entropy(text_ids, len(text_ids), 24, N_PROBES)
+            trace.append({
+                'branch': bi,
+                'sat': sat['sat_entropy'] if sat else 0.0,
+                'sat_top1': sat['sat_top1'] if sat else 0.0,
+                'tokens_added': len(clean_tokens),
+                'text': clean_text,
+                'status': 'cross_repetitive',
+            })
+            break
+        
+        # Language filter: stop if the model switches to a non-Latin script.
+        # Base models trained on multilingual data sometimes switch languages
+        # mid-generation (e.g., inserting Chinese "用户" or "机器人").
+        if has_non_latin_script(clean_text):
+            sat = measure_supersaturation_entropy(text_ids, len(text_ids), 24, N_PROBES)
+            trace.append({
+                'branch': bi,
+                'sat': sat['sat_entropy'] if sat else 0.0,
+                'sat_top1': sat['sat_top1'] if sat else 0.0,
+                'tokens_added': len(clean_tokens),
+                'text': clean_text,
+                'status': 'language_switch',
+            })
+            break
+        
+        branch_texts.append(clean_text)
         text_ids.extend(clean_tokens)
         
         # Measure supersaturation AFTER this branch
@@ -242,7 +323,7 @@ def grow_with_trace(seed_text):
         if sat is None:
             trace.append({
                 'branch': bi, 'sat': 0.0, 'sat_top1': 0.0,
-                'tokens_added': len(clean_tokens), 'text': clean_text[:100],
+                'tokens_added': len(clean_tokens), 'text': clean_text,
                 'status': 'overflow',
             })
             break
@@ -253,7 +334,7 @@ def grow_with_trace(seed_text):
             'sat_top1': round(sat['sat_top1'], 5),
             'entropy_norm': round(sat['mean_entropy_norm'], 5),
             'tokens_added': len(clean_tokens),
-            'text': clean_text[:100],
+            'text': clean_text,
             'status': 'ok',
         })
         
@@ -411,7 +492,7 @@ def main():
                 'n_branches': result['n_branches'],
                 'total_tokens': result['total_tokens'],
                 'elapsed': round(elapsed, 1),
-                'final_text': result['final_text'][:200],
+                'final_text': result['final_text'],
             }
             all_results.append(entry)
             

@@ -1,647 +1,390 @@
 [
   {
-    "label": "Photosynthesis",
+    "label": "Atmospheric layers",
     "discourse_type": "expository",
-    "description": "Expository branching \u2014 concept decomposition",
-    "seed": "Photosynthesis is the process by which plants convert light energy into chemical",
-    "n_branches": 4,
-    "total_tokens": 93,
+    "seed": "The Earth's atmosphere is divided into several layers, each with distinct characteristics.",
+    "n_branches": 3,
+    "total_tokens": 72,
     "supersaturation_trace": [
-      0.52145,
-      0.59976,
-      0.61797,
-      0.37899
+      0.5552,
+      0.56909,
+      0.39693
     ],
     "init_supersaturation": {
-      "sat_entropy": 0.50508,
-      "sat_top1": 0.06388,
-      "mean_entropy_norm": 0.49492,
-      "n_valid": 24
+      "sat_entropy": 0.5711342586709309,
+      "sat_top1": 0.10420865146443248,
+      "mean_entropy_norm": 0.4288657413290691,
+      "n_valid": 72
     },
-    "output": "The process of photosynthesis involves two stages: (1) light-dependent reactions and (2) light-independent reactions.In the light-dependent reactions, light energy is absorbed by chlorophyll molecules",
+    "output": "The lowest layer, the troposphere, is where most weather phenomena occur.The next layer, the stratosphere, is where most ozone is found, which helps protect the Earth from harmful solar radiation.The mesosphere is the layer between the stratosphere and the thermosphere, where temperatures can reach up to 2000 Celsius Fahrenheit.",
     "branch_trace": [
       {
         "branch": 0,
-        "sat": 0.52145,
-        "sat_top1": 0.07742,
-        "entropy_norm": 0.47855,
-        "tokens_added": 22,
-        "text": "The process of photosynthesis involves two stages: (1) light-dependent reactions and (2) light-indep",
+        "sat": 0.5552,
+        "sat_top1": 0.10245,
+        "entropy_norm": 0.4448,
+        "tokens_added": 17,
+        "text": "The lowest layer, the troposphere, is where most weather phenomena occur.",
         "status": "ok"
       },
       {
         "branch": 1,
-        "sat": 0.59976,
-        "sat_top1": 0.11615,
-        "entropy_norm": 0.40024,
-        "tokens_added": 23,
-        "text": "In the light-dependent reactions, light energy is absorbed by chlorophyll molecules in the chloropla",
-        "status": "ok"
-      },
-      {
-        "branch": 2,
-        "sat": 0.61797,
-        "sat_top1": 0.15714,
-        "entropy_norm": 0.38203,
-        "tokens_added": 15,
-        "text": "This energy is then used to split water molecules into oxygen and hydrogen ions.",
-        "status": "ok"
-      },
-      {
-        "branch": 3,
-        "sat": 0.37899,
-        "sat_top1": 0.03844,
-        "entropy_norm": 0.62101,
-        "tokens_added": 33,
-        "text": "These hydrogen ions are then used to reduce carbon dioxide to form glucose molecules,In the light-in",
-        "status": "ok"
-      }
-    ]
-  },
-  {
-    "label": "Nervous system",
-    "discourse_type": "expository",
-    "description": "Topic-driven branching \u2014 new subtopics spike supersaturation",
-    "seed": "The nervous system is a highly complex part of an animal that coordinates its ac",
-    "n_branches": 10,
-    "total_tokens": 290,
-    "supersaturation_trace": [
-      0.56244,
-      0.53119,
-      0.6402,
-      0.63085,
-      0.56242,
-      0.60562,
-      0.67468,
-      0.75122,
-      0.78862,
-      0.51165
-    ],
-    "init_supersaturation": {
-      "sat_entropy": 0.49576,
-      "sat_top1": 0.06295,
-      "mean_entropy_norm": 0.50424,
-      "n_valid": 24
-    },
-    "output": "In vertebrates, the nervous system consists of the central nervous system (CNS), which includes the brain and spinal cord, and the peripheral nervous system (P.NS), which includes the peripheral nerve",
-    "branch_trace": [
-      {
-        "branch": 0,
-        "sat": 0.56244,
-        "sat_top1": 0.13355,
-        "entropy_norm": 0.43756,
-        "tokens_added": 33,
-        "text": "In vertebrates, the nervous system consists of the central nervous system (CNS), which includes the ",
-        "status": "ok"
-      },
-      {
-        "branch": 1,
-        "sat": 0.53119,
-        "sat_top1": 0.0782,
-        "entropy_norm": 0.46881,
-        "tokens_added": 11,
-        "text": "NS), which includes the peripheral nerves and ganglia.",
-        "status": "ok"
-      },
-      {
-        "branch": 2,
-        "sat": 0.6402,
-        "sat_top1": 0.20755,
-        "entropy_norm": 0.3598,
+        "sat": 0.56909,
+        "sat_top1": 0.1169,
+        "entropy_norm": 0.43091,
         "tokens_added": 25,
-        "text": "The brain is the control center of the nervous system and regulates various functions such as moveme",
-        "status": "ok"
-      },
-      {
-        "branch": 3,
-        "sat": 0.63085,
-        "sat_top1": 0.155,
-        "entropy_norm": 0.36915,
-        "tokens_added": 26,
-        "text": "The spinal cord is the main connection between the brain and the rest of the body, transmitting sign",
-        "status": "ok"
-      },
-      {
-        "branch": 4,
-        "sat": 0.56242,
-        "sat_top1": 0.09075,
-        "entropy_norm": 0.43758,
-        "tokens_added": 32,
-        "text": "NS and from the P.NS to the CNS..The peripheral nerves and ganglia connect the CNS to different part",
-        "status": "ok"
-      },
-      {
-        "branch": 5,
-        "sat": 0.60562,
-        "sat_top1": 0.18962,
-        "entropy_norm": 0.39438,
-        "tokens_added": 33,
-        "text": "and sensory organs, and transmit signals to and from these parts to the CNS.In invertebrates, the ne",
-        "status": "ok"
-      },
-      {
-        "branch": 6,
-        "sat": 0.67468,
-        "sat_top1": 0.21742,
-        "entropy_norm": 0.32532,
-        "tokens_added": 33,
-        "text": "the SNS, which includes the brain and nerve cord, and the peripheral nervous system, which includes ",
-        "status": "ok"
-      },
-      {
-        "branch": 7,
-        "sat": 0.75122,
-        "sat_top1": 0.28626,
-        "entropy_norm": 0.24878,
-        "tokens_added": 33,
-        "text": "control.center of the nervous system and regulates various functions such as movement, sensation, me",
-        "status": "ok"
-      },
-      {
-        "branch": 8,
-        "sat": 0.78862,
-        "sat_top1": 0.46637,
-        "entropy_norm": 0.21138,
-        "tokens_added": 33,
-        "text": "the rest of the body, transmitting signals from the brain to the P.NS and from the P.NS to the CNS..",
-        "status": "ok"
-      },
-      {
-        "branch": 9,
-        "sat": 0.51165,
-        "sat_top1": 0.10388,
-        "entropy_norm": 0.48835,
-        "tokens_added": 31,
-        "text": "connect the CNS to different parts of the body, including as muscle skin.and sensory organs, and tra",
-        "status": "ok"
-      }
-    ]
-  },
-  {
-    "label": "Moon landing",
-    "discourse_type": "narrative",
-    "description": "Narrative exhaustion \u2014 story stays linear",
-    "seed": "On July 20, 1969, Neil Armstrong descended the ladder of the lunar module Eagle ",
-    "n_branches": 1,
-    "total_tokens": 32,
-    "supersaturation_trace": [
-      0.40607
-    ],
-    "init_supersaturation": {
-      "sat_entropy": 0.47307,
-      "sat_top1": 0.06982,
-      "mean_entropy_norm": 0.52693,
-      "n_valid": 24
-    },
-    "output": "He uttered his famous words that would echo, \"That's one small step for man, one giant leap for mankind.\" Armstrong\n\n\n\n\nLater.",
-    "branch_trace": [
-      {
-        "branch": 0,
-        "sat": 0.40607,
-        "sat_top1": 0.10134,
-        "entropy_norm": 0.59393,
-        "tokens_added": 32,
-        "text": "He uttered his famous words that would echo, \"That's one small step for man, one giant leap for mank",
-        "status": "ok"
-      }
-    ]
-  },
-  {
-    "label": "Mitosis vs meiosis",
-    "discourse_type": "comparative",
-    "description": "Rising supersaturation \u2014 self-sustaining comparative growth",
-    "seed": "Mitosis and meiosis are both forms of cell division, but they serve different bi",
-    "n_branches": 20,
-    "total_tokens": 641,
-    "supersaturation_trace": [
-      0.51875,
-      0.53463,
-      0.57906,
-      0.65202,
-      0.74217,
-      0.78896,
-      0.81365,
-      0.8463,
-      0.84803,
-      0.86247,
-      0.88789,
-      0.89672,
-      0.90208,
-      0.92496,
-      0.94005,
-      0.94214,
-      0.94792,
-      0.94821,
-      0.94848,
-      0.64698
-    ],
-    "init_supersaturation": {
-      "sat_entropy": 0.56528,
-      "sat_top1": 0.12949,
-      "mean_entropy_norm": 0.43472,
-      "n_valid": 24
-    },
-    "output": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meiosis is the process by which a single cell divides into four.Mitosis is the process by which a single ",
-    "branch_trace": [
-      {
-        "branch": 0,
-        "sat": 0.51875,
-        "sat_top1": 0.08337,
-        "entropy_norm": 0.48125,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 1,
-        "sat": 0.53463,
-        "sat_top1": 0.11152,
-        "entropy_norm": 0.46537,
-        "tokens_added": 32,
-        "text": "Mitosis is the process by which a single cell divides into two identical cells, while meiosis is the",
+        "text": "The next layer, the stratosphere, is where most ozone is found, which helps protect the Earth from harmful solar radiation.",
         "status": "ok"
       },
       {
         "branch": 2,
-        "sat": 0.57906,
-        "sat_top1": 0.18002,
-        "entropy_norm": 0.42094,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 3,
-        "sat": 0.65202,
-        "sat_top1": 0.34161,
-        "entropy_norm": 0.34798,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 4,
-        "sat": 0.74217,
-        "sat_top1": 0.53624,
-        "entropy_norm": 0.25783,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 5,
-        "sat": 0.78896,
-        "sat_top1": 0.63743,
-        "entropy_norm": 0.21104,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 6,
-        "sat": 0.81365,
-        "sat_top1": 0.67113,
-        "entropy_norm": 0.18635,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 7,
-        "sat": 0.8463,
-        "sat_top1": 0.74328,
-        "entropy_norm": 0.1537,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 8,
-        "sat": 0.84803,
-        "sat_top1": 0.76119,
-        "entropy_norm": 0.15197,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 9,
-        "sat": 0.86247,
-        "sat_top1": 0.7756,
-        "entropy_norm": 0.13753,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 10,
-        "sat": 0.88789,
-        "sat_top1": 0.82294,
-        "entropy_norm": 0.11211,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 11,
-        "sat": 0.89672,
-        "sat_top1": 0.84075,
-        "entropy_norm": 0.10328,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 12,
-        "sat": 0.90208,
-        "sat_top1": 0.84619,
-        "entropy_norm": 0.09792,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 13,
-        "sat": 0.92496,
-        "sat_top1": 0.88327,
-        "entropy_norm": 0.07504,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 14,
-        "sat": 0.94005,
-        "sat_top1": 0.9046,
-        "entropy_norm": 0.05995,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 15,
-        "sat": 0.94214,
-        "sat_top1": 0.90601,
-        "entropy_norm": 0.05786,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 16,
-        "sat": 0.94792,
-        "sat_top1": 0.91769,
-        "entropy_norm": 0.05208,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 17,
-        "sat": 0.94821,
-        "sat_top1": 0.92145,
-        "entropy_norm": 0.05179,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 18,
-        "sat": 0.94848,
-        "sat_top1": 0.92583,
-        "entropy_norm": 0.05152,
-        "tokens_added": 33,
-        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meios",
-        "status": "ok"
-      },
-      {
-        "branch": 19,
-        "sat": 0.64698,
-        "sat_top1": 0.24171,
-        "entropy_norm": 0.35302,
-        "tokens_added": 15,
-        "text": "Mitosis is the process by which a single cell divides into two identical.",
+        "sat": 0.39693,
+        "sat_top1": 0.08012,
+        "entropy_norm": 0.60307,
+        "tokens_added": 30,
+        "text": "The mesosphere is the layer between the stratosphere and the thermosphere, where temperatures can reach up to 2000 Celsius Fahrenheit.",
         "status": "ok"
       }
-    ]
+    ],
+    "model_precision": "float16",
+    "deterministic": true
   },
   {
     "label": "Arteries vs veins",
     "discourse_type": "comparative",
-    "description": "Oscillating supersaturation \u2014 alternating comparison points",
-    "seed": "Arteries and veins are both blood vessels, but they differ in structure, functio",
-    "n_branches": 20,
-    "total_tokens": 588,
+    "seed": "Arteries and veins are both blood vessels, but they differ in structure, function, and the direction of blood flow.",
+    "n_branches": 4,
+    "total_tokens": 112,
     "supersaturation_trace": [
-      0.5657,
-      0.56189,
-      0.60115,
-      0.66728,
-      0.64674,
-      0.60771,
-      0.54408,
-      0.56095,
-      0.51864,
-      0.56189,
-      0.56,
-      0.55318,
-      0.54135,
-      0.67052,
-      0.66689,
-      0.66447,
-      0.69361,
-      0.79892,
-      0.77425,
-      0.68054
+      0.55679,
+      0.70748,
+      0.58069,
+      0.51758
     ],
     "init_supersaturation": {
-      "sat_entropy": 0.57501,
-      "sat_top1": 0.12335,
-      "mean_entropy_norm": 0.42499,
-      "n_valid": 24
+      "sat_entropy": 0.5826637244849805,
+      "sat_top1": 0.12014949135482311,
+      "mean_entropy_norm": 0.4173362755150195,
+      "n_valid": 72
     },
-    "output": "Arteries carry blood away from the heart, while veins bring blood back to the heart.\n\n1.Structure: Arteries have thicker walls than veins, which helps them to withstand the pressure of the heart pumpi",
+    "output": "1. Structure: Arteries have thick walls made of smooth muscle and collagen, while veins have thinner walls made of smooth muscle and elastic fibers.Arteries have a larger lumen (inner diameter) than veins, allowing for faster blood flow.Function: Arteries carry oxygenated blood away from the heart to the body's tissues and organs, while veins carry deoxygenated blood back to the heart.3. Direction of blood flow: Blood flows from the heart to the body's tissues and organs through arteries, and back to the heart through veins.",
     "branch_trace": [
       {
         "branch": 0,
-        "sat": 0.5657,
-        "sat_top1": 0.11735,
-        "entropy_norm": 0.4343,
-        "tokens_added": 22,
-        "text": "Arteries carry blood away from the heart, while veins bring blood back to the heart.\n\n1.",
+        "sat": 0.55679,
+        "sat_top1": 0.08255,
+        "entropy_norm": 0.44321,
+        "tokens_added": 29,
+        "text": "1. Structure: Arteries have thick walls made of smooth muscle and collagen, while veins have thinner walls made of smooth muscle and elastic fibers.",
         "status": "ok"
       },
       {
         "branch": 1,
-        "sat": 0.56189,
-        "sat_top1": 0.10593,
-        "entropy_norm": 0.43811,
-        "tokens_added": 24,
-        "text": "Structure: Arteries have thicker walls than veins, which helps them to withstand the pressure of the",
+        "sat": 0.70748,
+        "sat_top1": 0.25411,
+        "entropy_norm": 0.29252,
+        "tokens_added": 21,
+        "text": "Arteries have a larger lumen (inner diameter) than veins, allowing for faster blood flow.",
         "status": "ok"
       },
       {
         "branch": 2,
-        "sat": 0.60115,
-        "sat_top1": 0.13276,
-        "entropy_norm": 0.39885,
-        "tokens_added": 13,
-        "text": "They also have smooth muscle layers that help to regulate blood flow.",
+        "sat": 0.58069,
+        "sat_top1": 0.1253,
+        "entropy_norm": 0.41931,
+        "tokens_added": 32,
+        "text": "Function: Arteries carry oxygenated blood away from the heart to the body's tissues and organs, while veins carry deoxygenated blood back to the heart.",
         "status": "ok"
       },
       {
         "branch": 3,
-        "sat": 0.66728,
-        "sat_top1": 0.27583,
-        "entropy_norm": 0.33272,
-        "tokens_added": 23,
-        "text": "Veins have thinner walls and fewer muscle layers, which allows them to return blood back to the hear",
+        "sat": 0.51758,
+        "sat_top1": 0.07812,
+        "entropy_norm": 0.48242,
+        "tokens_added": 30,
+        "text": "3. Direction of blood flow: Blood flows from the heart to the body's tissues and organs through arteries, and back to the heart through veins.",
+        "status": "ok"
+      }
+    ],
+    "model_precision": "float16",
+    "deterministic": true
+  },
+  {
+    "label": "Noise pollution effects",
+    "discourse_type": "causal",
+    "seed": "Noise pollution, often overlooked as an environmental hazard, has significant effects on both human health and wildlife.",
+    "n_branches": 6,
+    "total_tokens": 166,
+    "supersaturation_trace": [
+      0.55212,
+      0.5471,
+      0.54701,
+      0.55198,
+      0.58374,
+      0.45476
+    ],
+    "init_supersaturation": {
+      "sat_entropy": 0.49090843650613014,
+      "sat_top1": 0.09056236936400335,
+      "mean_entropy_norm": 0.5090915634938699,
+      "n_valid": 72
+    },
+    "output": "It can lead to hearing loss, sleep disturbances, and even stress in animals.\n\nOne of the primary sources of noise pollution is transportation.Cars, trucks, and airplanes produce loud noises that can disrupt the natural behaviors of animals, such as mating calls and territorializations.Another source of noise pollution is industrial activities, such as construction sites and factories.These activities can produce high levels of noise that can affect the hearing of.The effects of noise pollution on wildlife can be severe.Animals that rely on sound for communication, such as birds and bats, can be affected by noise.Noise can also disrupt the natural behaviors of animals, such as mating calls and territorializations.To mitigate noise pollution, several measures can be taken.One approach is to implement noise control measures, such as noise barriers and soundproofingThese measures can.",
+    "branch_trace": [
+      {
+        "branch": 0,
+        "sat": 0.55212,
+        "sat_top1": 0.12429,
+        "entropy_norm": 0.44788,
+        "tokens_added": 29,
+        "text": "It can lead to hearing loss, sleep disturbances, and even stress in animals.\n\nOne of the primary sources of noise pollution is transportation.",
+        "status": "ok"
+      },
+      {
+        "branch": 1,
+        "sat": 0.5471,
+        "sat_top1": 0.11348,
+        "entropy_norm": 0.4529,
+        "tokens_added": 26,
+        "text": "Cars, trucks, and airplanes produce loud noises that can disrupt the natural behaviors of animals, such as mating calls and territorializations.",
+        "status": "ok"
+      },
+      {
+        "branch": 2,
+        "sat": 0.54701,
+        "sat_top1": 0.13511,
+        "entropy_norm": 0.45299,
+        "tokens_added": 31,
+        "text": "Another source of noise pollution is industrial activities, such as construction sites and factories.These activities can produce high levels of noise that can affect the hearing of.",
+        "status": "ok"
+      },
+      {
+        "branch": 3,
+        "sat": 0.55198,
+        "sat_top1": 0.10583,
+        "entropy_norm": 0.44802,
+        "tokens_added": 31,
+        "text": "The effects of noise pollution on wildlife can be severe.Animals that rely on sound for communication, such as birds and bats, can be affected by noise.",
         "status": "ok"
       },
       {
         "branch": 4,
-        "sat": 0.64674,
-        "sat_top1": 0.15965,
-        "entropy_norm": 0.35326,
-        "tokens_added": 31,
-        "text": "2.Function: Arteries carry blood away from the heart to the tissues and organs of the body,They deli",
+        "sat": 0.58374,
+        "sat_top1": 0.13653,
+        "entropy_norm": 0.41626,
+        "tokens_added": 18,
+        "text": "Noise can also disrupt the natural behaviors of animals, such as mating calls and territorializations.",
         "status": "ok"
       },
       {
         "branch": 5,
-        "sat": 0.60771,
-        "sat_top1": 0.13156,
-        "entropy_norm": 0.39229,
-        "tokens_added": 33,
-        "text": "Veins bring blood back to the heart, collecting waste products and returning them to the lungs for d",
+        "sat": 0.45476,
+        "sat_top1": 0.07012,
+        "entropy_norm": 0.54524,
+        "tokens_added": 31,
+        "text": "To mitigate noise pollution, several measures can be taken.One approach is to implement noise control measures, such as noise barriers and soundproofingThese measures can.",
+        "status": "ok"
+      }
+    ],
+    "model_precision": "float16",
+    "deterministic": true
+  },
+  {
+    "label": "Photosynthesis",
+    "discourse_type": "expository",
+    "seed": "Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize foods from carbon dioxide and water.",
+    "n_branches": 8,
+    "total_tokens": 188,
+    "supersaturation_trace": [
+      0.60389,
+      0.58323,
+      0.65391,
+      0.65666,
+      0.65212,
+      0.608,
+      0.54279,
+      0.4824
+    ],
+    "init_supersaturation": {
+      "sat_entropy": 0.48112552947184994,
+      "sat_top1": 0.053077149049689375,
+      "mean_entropy_norm": 0.5188744705281501,
+      "n_valid": 72
+    },
+    "output": "It is a complex process that involves a series of chemical reactions and energy transfers.\n\nThe basic process of photosynthesis is as follows:\n\n1.Carbon dioxide enters the plant through the stomata, which are small openings on the surface of the leaves.Water enters the plant through the roots.\n3,Light energy is absorbed by chlorophyll, a pigment found in the leavesoplasts of the plant.4,This energy is used to split water molecules into hydrogen and oxygen atoms.5,The hydrogen atoms are used to convert carbon dioxide into glucose, a type of sugar.6,The oxygen atoms are released into the atmosphere.Photosynthesis is an important process for plants because it allows them to produce their own food and energy.Without photosynthesis, plants would not be able to survive.Photosynthesis is also important for the environment because it releases oxygen into the atmosphere, which is necessary for animals and other organisms to breathe.",
+    "branch_trace": [
+      {
+        "branch": 0,
+        "sat": 0.60389,
+        "sat_top1": 0.11031,
+        "entropy_norm": 0.39611,
+        "tokens_added": 31,
+        "text": "It is a complex process that involves a series of chemical reactions and energy transfers.\n\nThe basic process of photosynthesis is as follows:\n\n1.",
+        "status": "ok"
+      },
+      {
+        "branch": 1,
+        "sat": 0.58323,
+        "sat_top1": 0.11922,
+        "entropy_norm": 0.41677,
+        "tokens_added": 24,
+        "text": "Carbon dioxide enters the plant through the stomata, which are small openings on the surface of the leaves.",
+        "status": "ok"
+      },
+      {
+        "branch": 2,
+        "sat": 0.65391,
+        "sat_top1": 0.20034,
+        "entropy_norm": 0.34609,
+        "tokens_added": 31,
+        "text": "Water enters the plant through the roots.\n3,Light energy is absorbed by chlorophyll, a pigment found in the leavesoplasts of the plant.",
+        "status": "ok"
+      },
+      {
+        "branch": 3,
+        "sat": 0.65666,
+        "sat_top1": 0.1585,
+        "entropy_norm": 0.34334,
+        "tokens_added": 16,
+        "text": "4,This energy is used to split water molecules into hydrogen and oxygen atoms.",
+        "status": "ok"
+      },
+      {
+        "branch": 4,
+        "sat": 0.65212,
+        "sat_top1": 0.18424,
+        "entropy_norm": 0.34788,
+        "tokens_added": 18,
+        "text": "5,The hydrogen atoms are used to convert carbon dioxide into glucose, a type of sugar.",
+        "status": "ok"
+      },
+      {
+        "branch": 5,
+        "sat": 0.608,
+        "sat_top1": 0.13632,
+        "entropy_norm": 0.392,
+        "tokens_added": 10,
+        "text": "6,The oxygen atoms are released into the atmosphere.",
         "status": "ok"
       },
       {
         "branch": 6,
-        "sat": 0.54408,
-        "sat_top1": 0.09158,
-        "entropy_norm": 0.45592,
-        "tokens_added": 25,
-        "text": "Directly away from the heart to the tissues and organs, while blood flows in veins.veins back to the",
+        "sat": 0.54279,
+        "sat_top1": 0.10808,
+        "entropy_norm": 0.45721,
+        "tokens_added": 31,
+        "text": "Photosynthesis is an important process for plants because it allows them to produce their own food and energy.Without photosynthesis, plants would not be able to survive.",
         "status": "ok"
       },
       {
         "branch": 7,
-        "sat": 0.56095,
-        "sat_top1": 0.10998,
-        "entropy_norm": 0.43905,
-        "tokens_added": 32,
-        "text": "4.Pressure: Blood pressure in arteries is higher than blood pressure in veins, as blood is pumped ou",
-        "status": "ok"
-      },
-      {
-        "branch": 8,
-        "sat": 0.51864,
-        "sat_top1": 0.07586,
-        "entropy_norm": 0.48136,
-        "tokens_added": 33,
-        "text": "5.Flow: Blood flow in arteries is generally faster than blood flow in veins, as blood is pumped out ",
-        "status": "ok"
-      },
-      {
-        "branch": 9,
-        "sat": 0.56189,
-        "sat_top1": 0.09939,
-        "entropy_norm": 0.43811,
-        "tokens_added": 33,
-        "text": "6.Diameter: Arteries are generally larger than veins, as they need to carry a greater volume of bloo",
-        "status": "ok"
-      },
-      {
-        "branch": 10,
-        "sat": 0.56,
-        "sat_top1": 0.13366,
-        "entropy_norm": 0.44,
-        "tokens_added": 33,
-        "text": "Under the skin, while veins are visible red under the skin.8.Th thickness: Arteries are generally th",
-        "status": "ok"
-      },
-      {
-        "branch": 11,
-        "sat": 0.55318,
-        "sat_top1": 0.11863,
-        "entropy_norm": 0.44682,
-        "tokens_added": 33,
-        "text": "Greater volume of blood.9.Muscle: Arteries have smooth muscle layers that help to regulate blood flo",
-        "status": "ok"
-      },
-      {
-        "branch": 12,
-        "sat": 0.54135,
-        "sat_top1": 0.10878,
-        "entropy_norm": 0.45865,
-        "tokens_added": 24,
-        "text": "Valves: Arteries have valves that prevent blood from flowing back into the heart, while veins do not",
-        "status": "ok"
-      },
-      {
-        "branch": 13,
-        "sat": 0.67052,
-        "sat_top1": 0.25567,
-        "entropy_norm": 0.32948,
-        "tokens_added": 32,
-        "text": "11.Length: Arteries are generally longer than veins, as they need to carry a greater volume of blood",
-        "status": "ok"
-      },
-      {
-        "branch": 14,
-        "sat": 0.66689,
-        "sat_top1": 0.28385,
-        "entropy_norm": 0.33311,
-        "tokens_added": 33,
-        "text": "Thicker walls than veins, which helps them to withstand the pressure of the heart pumping blood out.",
-        "status": "ok"
-      },
-      {
-        "branch": 15,
-        "sat": 0.66447,
-        "sat_top1": 0.28042,
-        "entropy_norm": 0.33553,
-        "tokens_added": 33,
-        "text": "Veins, as they need to carry a greater volume of blood.14.Coloration: Arteries are visible blue unde",
-        "status": "ok"
-      },
-      {
-        "branch": 16,
-        "sat": 0.69361,
-        "sat_top1": 0.2602,
-        "entropy_norm": 0.30639,
-        "tokens_added": 33,
-        "text": "Red under the skin.15.SStructure: Arteries have smooth muscle layers that help to regulate blood flo",
-        "status": "ok"
-      },
-      {
-        "branch": 17,
-        "sat": 0.79892,
-        "sat_top1": 0.50113,
-        "entropy_norm": 0.20108,
-        "tokens_added": 33,
-        "text": "Valves: Arteries have valves that prevent blood from flowing back into the heart, while veins do not",
-        "status": "ok"
-      },
-      {
-        "branch": 18,
-        "sat": 0.77425,
-        "sat_top1": 0.48319,
-        "entropy_norm": 0.22575,
-        "tokens_added": 32,
-        "text": "Thicker than veins, as they need to carry a greater volume of blood.18.Length: Arteries are generall",
-        "status": "ok"
-      },
-      {
-        "branch": 19,
-        "sat": 0.68054,
-        "sat_top1": 0.23207,
-        "entropy_norm": 0.31946,
-        "tokens_added": 33,
-        "text": "need to carry a greater volume of blood.19.Wall: Arteries have thicker walls than veins, which helps",
+        "sat": 0.4824,
+        "sat_top1": 0.09433,
+        "entropy_norm": 0.5176,
+        "tokens_added": 27,
+        "text": "Photosynthesis is also important for the environment because it releases oxygen into the atmosphere, which is necessary for animals and other organisms to breathe.",
         "status": "ok"
       }
-    ]
+    ],
+    "model_precision": "float16",
+    "deterministic": true
+  },
+  {
+    "label": "Moon landing",
+    "discourse_type": "narrative",
+    "seed": "On July 20, 1969, Neil Armstrong descended the ladder of the lunar module Eagle and stepped onto the surface of the Moon.",
+    "n_branches": 1,
+    "total_tokens": 13,
+    "supersaturation_trace": [
+      0.4238
+    ],
+    "init_supersaturation": {
+      "sat_entropy": 0.4748543586164101,
+      "sat_top1": 0.07722080467889707,
+      "mean_entropy_norm": 0.5251456413835899,
+      "n_valid": 72
+    },
+    "output": "He was the first human to set foot on another celestial body.",
+    "branch_trace": [
+      {
+        "branch": 0,
+        "sat": 0.4238,
+        "sat_top1": 0.05349,
+        "entropy_norm": 0.5762,
+        "tokens_added": 13,
+        "text": "He was the first human to set foot on another celestial body.",
+        "status": "ok"
+      }
+    ],
+    "model_precision": "float16",
+    "deterministic": true
+  },
+  {
+    "label": "Mitosis vs meiosis",
+    "discourse_type": "comparative",
+    "seed": "Mitosis and meiosis are both forms of cell division, but they serve different biological purposes.",
+    "n_branches": 1,
+    "total_tokens": 33,
+    "supersaturation_trace": [
+      0.52587
+    ],
+    "init_supersaturation": {
+      "sat_entropy": 0.6202800112621163,
+      "sat_top1": 0.20321636383111277,
+      "mean_entropy_norm": 0.3797199887378837,
+      "n_valid": 72
+    },
+    "output": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meiosis is the process by which a single cell divides into four.",
+    "branch_trace": [
+      {
+        "branch": 0,
+        "sat": 0.52587,
+        "sat_top1": 0.08865,
+        "entropy_norm": 0.47413,
+        "tokens_added": 33,
+        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meiosis is the process by which a single cell divides into four.",
+        "status": "ok"
+      },
+      {
+        "branch": 1,
+        "sat": 0.525867224532334,
+        "sat_top1": 0.08865117840468884,
+        "tokens_added": 33,
+        "text": "Mitosis is the process by which a single cell divides into two identical daughter cells, while meiosis is the process by which a single cell divides into four.",
+        "status": "cross_repetitive"
+      }
+    ],
+    "model_precision": "float16",
+    "deterministic": true
+  },
+  {
+    "label": "Coral reef decline",
+    "discourse_type": "causal",
+    "seed": "Coral reefs around the world are in decline due to a combination of environmental stressors.",
+    "n_branches": 1,
+    "total_tokens": 23,
+    "supersaturation_trace": [
+      0.44682
+    ],
+    "init_supersaturation": {
+      "sat_entropy": 0.4530835373701234,
+      "sat_top1": 0.05860579324265321,
+      "mean_entropy_norm": 0.5469164626298766,
+      "n_valid": 72
+    },
+    "output": "Climate change, ocean acidification, pollution, and overfishing are all contributing to the degradation of these vital ecosystems.",
+    "branch_trace": [
+      {
+        "branch": 0,
+        "sat": 0.44682,
+        "sat_top1": 0.06228,
+        "entropy_norm": 0.55318,
+        "tokens_added": 23,
+        "text": "Climate change, ocean acidification, pollution, and overfishing are all contributing to the degradation of these vital ecosystems.",
+        "status": "ok"
+      }
+    ],
+    "model_precision": "float16",
+    "deterministic": true
   }
 ]
